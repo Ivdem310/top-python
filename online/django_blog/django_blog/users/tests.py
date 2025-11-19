@@ -13,6 +13,13 @@ class UsersTest(TestCase):
         response = self.client.get(reverse('index'))
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'testuser')
+        
+        # Проверяем наличие данных в контексте шаблона
+        # self.assertIn("users", response.context)
+        # users = response.context["users"]
+
+        # Проверяем не пустой ли список пользователей
+        # self.assertTrue(len(users) > 0)
     
     def test_user_update_flow(self):
         update_url = reverse('update', kwargs={'pk': self.user.pk})

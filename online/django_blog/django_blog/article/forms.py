@@ -14,6 +14,8 @@ from .models import Comment
 #             )
 #         return text
 
+    #content = forms.CharField(label="Комментарий", max_length=200)
+
 class ArticleCommentForm(forms.ModelForm):
     class Meta:
         model = Comment

@@ -75,7 +75,7 @@ class CommentCreateView(View):
         form = ArticleCommentForm(request.POST)
         if form.is_valid():
             comment = form.save(commit=False)
-            #comment.text = check_for_spam(form.cleaned_data["text"])
+            #comment.text = check_for_spam(form.cleaned_data["text"])s
             comment.author = request.user
             comment.article = article
             comment.save()

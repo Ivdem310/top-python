@@ -2,6 +2,8 @@ from django.contrib import admin
 from .models import Article, Comment
 from django.contrib.admin import DateFieldListFilter
 
+#admin.site.register(Article)
+
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
     list_display = (

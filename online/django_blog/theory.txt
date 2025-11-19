@@ -7,6 +7,7 @@ uv run django-admin version
 uv run manage.py runserver
 uv run manage.py migrate
 django-admin startapp article
+(uv run django-admin startapp article)
 
 python manage.py makemigrations
 python manage.py migrate
